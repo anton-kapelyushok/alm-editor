@@ -1,5 +1,8 @@
 ## ALM Concurrent Editor
 
+#### Build and execute
+`gradlew clean build bootRun`
+
 #### API Description
 
 Service provides 4 methods for operating on documents:
