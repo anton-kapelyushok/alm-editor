@@ -1,5 +1,59 @@
 ## ALM Concurrent Editor
 
+The following test task should take 4-6 hours to complete. If you have spent 8 hours or more on this task, please send us whatever results you have.
+
+Some problems to be solved in this task are close to the problem that we’re dealing with in our commercial products.
+
+When assessing the result of your work, we will be paying most attention to the architecture and design of the application, performance, code quality and usability. 
+
+(A note on comments: you don’t need to comment everything! Leave only comments that provide considerable help in reading the code. Comments must be in English.)
+
+Along with the resulting source code, please submit a short description of the architecture (2-3 paragraphs), in English. 
+
+
+Concurrent Editing Model
+------------------------
+
+You're in a team that builds an online concurrent editing tool, something like Google Docs. When the tool is ready, multiple users will be able to log in and work on the shared documents at the same time. 
+
+You are responsible for the server-side model of this system. You will need  to build a model that would support at least the following features of the app:
+
+* Live updates - when one user enters text, the other users see it, maybe with a little delay but without reloading the page.
+
+* Concurrent editing - multiple users can make edits at the same time. Concurrent edits should always merge and never result in a conflict.
+
+
+You're encouraged to think about other properties that such system must have.
+
+The test task is: think about the architecture of this application and create a model in Java for it. The model should include: 
+a) data structures to keep data in memory; 
+b) interfaces for working with this data that would be used when implementing features listed above; 
+c) implementation of these interfaces.
+
+Assume that everything happens in memory, don't bother with databases or other storage.
+
+The format is plain text (no formatting!) and the language is known to be English.
+
+You can use:
+
+* JDK 1.8
+* Kotlin
+* Web technology stack of your choice (Spring / Akka HTTP / Play / Ktor / vert.x)
+* Apache Commons (any library)
+* Guava
+
+------
+
+Optional tasks:
+
+1. Provide RESTful API for the model (specify the protocol without the implementation)
+
+2. Implement the RESTful API
+
+3. Undo / redo for each individual user.
+
+
+
 #### Build and execute
 `gradlew clean build bootRun`
 
